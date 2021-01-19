@@ -1,0 +1,22 @@
+# Left Switch
+Vagrant.configure("2") do |config|
+
+	config.vm.network "private_network", ip: "192.168.0.106", virtualbox__intnet: "mynetworkB" # Machine B
+	config.vm.network "private_network", ip: "192.168.0.108", virtualbox__intnet: "mynetworkD" # Machine D
+	config.vm.network "private_network", ip: "192.168.0.105", virtualbox__intnet: "mynetworkSwitch" # Switch Left
+
+  config.vm.box = "debian/buster64"
+  config.vm.provision :shell, path: "bootstrap.sh"
+
+  config.vm.network "forwarded_port", guest: 5000, host: 8091, host_ip: "127.0.0.1"
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "1024"
+  end
+
+config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.customize ["modifyvm", :id, "--nicpromisc2", "allow-all"]
+	  vb.customize ["modifyvm", :id, "--nicpromisc3", "allow-all"]
+	  vb.customize ["modifyvm", :id, "--nicpromisc4", "allow-all"]
+  end
+end
