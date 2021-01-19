@@ -1,5 +1,8 @@
 apt-get update
 
+# ip route add 192.168.0.10/32 dev eth1 # Machine A
+# ip route add 192.168.0.211/32 dev eth2 # Machine C
+
 wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 

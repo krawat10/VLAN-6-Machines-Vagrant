@@ -1,9 +1,9 @@
 # Left Switch
 Vagrant.configure("2") do |config|
 
-	config.vm.network "private_network", ip: "192.168.0.106", virtualbox__intnet: "mynetworkB" # Machine B
-	config.vm.network "private_network", ip: "192.168.0.108", virtualbox__intnet: "mynetworkD" # Machine D
-	config.vm.network "private_network", ip: "192.168.0.105", virtualbox__intnet: "mynetworkSwitch" # Switch Left
+	config.vm.network "private_network", ip: "192.168.0.120", virtualbox__intnet: "mynetworkB" # Machine B
+	config.vm.network "private_network", ip: "192.168.0.121", virtualbox__intnet: "mynetworkD" # Machine D
+	config.vm.network "private_network", ip: "192.168.0.122", virtualbox__intnet: "mynetworkSwitch" # Switch Left
 
   config.vm.box = "debian/buster64"
   config.vm.provision :shell, path: "bootstrap.sh"
