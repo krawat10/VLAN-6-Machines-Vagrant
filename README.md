@@ -1,6 +1,6 @@
 # Vagrant-6-Machines
 
-Vagrant VM Configuration prepared to present VLAN feature of application [a link](https://github.com/krawat10/EthernetSwitch) 
+Vagrant VM Configuration prepared to present VLAN feature of application [EthernetSwitch](https://github.com/krawat10/EthernetSwitch) 
 
 
 
