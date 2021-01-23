@@ -1,3 +1,3 @@
 apt-get update
-apt-get install -y lldpd
-/etc/init.d/lldpd start
+# apt-get install -y lldpd
+# /etc/init.d/lldpd start
